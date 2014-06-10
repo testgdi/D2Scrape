@@ -4,14 +4,21 @@
 
   Usage: python d2-crawl.py --commid 14590
 
+  if you want to send the output to a file do
+
+         python d2-crawl.py --commid 14590 > output.txt
+
   You can look up the committee id by using the committee search utility at
+  
   http://www.elections.il.gov/campaigndisclosure/committeesearch.aspx
+
   When you find the committee you want and click on it the url in the window will be
   something like
 
   http://www.elections.il.gov/campaigndisclosure/CommitteeDetail.aspx?id=14590
 
-  the value of id is the argument to put on the command line
+  see the value of 14590 in the url? Put that on the command line
+  after --commid as in the example
 
 """
 
