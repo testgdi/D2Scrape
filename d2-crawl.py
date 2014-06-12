@@ -128,23 +128,8 @@ for fdid in filedocids:
 
 if debug:
     print "Start output"        
+
 for i in range( len( who)):
     outstr = "\t".join( [ who[i], address[i], date[i], amt[i]])
     print  outstr.encode('utf8', 'replace')
 
-#<th id="ctl00_ContentPlaceHolder1_Itemized Contributions24"
-#style="display:none;"></th><td class="tdContributedBy"
-#headers="ctl00_ContentPlaceHolder1_thContributedBy"><span>McAdam
-#Landscaping</span></td><td class="tdContribAddress"
-#headers="ctl00_ContentPlaceHolder1_thAddress"><span>7313
-#Franklin<br/>Forest Park, IL 60130 </span></td><td
-#class="tdContribAmount"
-#headers="ctl00_ContentPlaceHolder1_thAmount"><span>$250.00<br/>3/18/2001</span></td><td
-#class="tdDescription"
-#headers="ctl00_ContentPlaceHolder1_thDescription"><span>Individual
-#Contribution</span><span></span><a
-#href="CommitteeDetail.aspx?id=14590"><br/>Citizens for Anthony
-#Calderone</a></td><td class="tdVendorName"
-#headers="ctl00_ContentPlaceHolder1_thVendorName"><span></span></td><td
-#class="tdVendorAddress"
-#headers="ctl00_ContentPlaceHolder1_thVendorAddress"><span></span></td>
