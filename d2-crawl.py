@@ -29,9 +29,11 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--commid', help='commid help', default='23897')
+parser.add_argument('--type', help='contrib type: individual, transfer, ', default='individual')
 
 args = parser.parse_args()
 commid = args.commid
+contrib_type = args.type
 
 # calderone 14590
 # fppac 23897
@@ -91,7 +93,10 @@ date = []
 for fdid in filedocids:
     url = "http://www.elections.il.gov/CampaignDisclosure/" + fdid 
     soup=BeautifulSoup( urllib2.urlopen( url))
-    itemized_link = soup.body.find("a", attrs={'id': "ctl00_ContentPlaceHolder1_btnIndivContribItmzd"})
+    if contrib_type == "individual":
+        itemized_link = soup.body.find("a", attrs={'id': "ctl00_ContentPlaceHolder1_btnIndivContribItmzd"})
+    elif contrib_type == "transfer":
+        itemized_link = soup.body.find("a", attrs={'id': "ctl00_ContentPlaceHolder1_btnXferInItmzd"})
     
     if itemized_link != None:
         full_itemized_link = "http://www.elections.il.gov/CampaignDisclosure/" + itemized_link.get("href")
